@@ -1,0 +1,137 @@
+@import "../../../../../assets/styles/colors.scss";
+
+.side {
+  background-color: white;
+  font-size: 11px;
+  overflow: hidden;
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #838383;
+    border-radius: 5px;
+    border: 0px solid transparent;
+  }
+}
+
+.app-nav-accordion {
+  padding: 12px;
+  overflow-y: auto;
+  .mat-expansion-panel {
+    background-color: white;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+
+    &.mat-expansion-panel-spacing {
+      margin: 0px;
+    }
+
+    .mat-expansion-panel-body {
+      padding: 0px !important;
+    }
+  }
+
+  .mat-expansion-panel-header-title,
+  mat-nav-list > a {
+    color: white;
+    font-size: 11px;
+  }
+
+  .mat-expansion-panel-header {
+    height: 30px !important;
+    padding: 0px 24px 0px 16px;
+  }
+
+  mat-nav-list {
+    padding: 0px;
+
+    > a {
+      min-height: 25px;
+      line-height: 1;
+      height: auto !important;
+      display: flex !important;
+      font-weight: 300;
+    }
+  }
+}
+
+mat-icon {
+  padding: 0px !important;
+  margin-right: 0.3em;
+  width: 20px !important;
+  height: 20px !important;
+  font-size: 20px !important;
+}
+
+::ng-deep app-admin-sidebar {
+  .itemlink {
+    height: 25px !important;
+    font-size: 11px !important;
+    color: white !important;
+    font-weight: normal !important;
+
+    .mat-list-item-content {
+      border-bottom: 1px solid #f1f1f12b;
+    }
+  }
+  .mat-expansion-indicator::after {
+    color: white;
+    border-width: 0 1px 1px 0;
+  }
+  .mat-expansion-panel-body {
+    padding: 0 10px 5px 10px;
+  }
+  .mat-list-base .mat-list-item .mat-list-item-content,
+  .mat-list-base .mat-list-option .mat-list-item-content {
+    width: 100%;
+  }
+}
+
+.active, .router-link-active {
+  background: $Primary-P500 !important;
+  p,
+  .fa-solid,
+  .fa-regular {
+    color: white !important;
+  }
+  font-weight: bold !important;
+  border-radius: 0px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    font-weight: bold !important;
+    background: $Primary-P500 !important;
+    color: white !important;
+  }
+}
+
+.subactive {
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+.info {
+  font-size: 10px;
+  font-weight: 200;
+  color: #113455 !important;
+  line-height: 1;
+  p {
+    margin-top: 1em;
+    font-size: 10px;
+    margin-bottom: 0;
+    a {
+      color: #113455;
+      font-weight: 500;
+    }
+  }
+}
+
+.fa-solid,
+.fa-regular {
+  color: #113455 !important;
+}
+
+.vanti-icon-small {
+  width: 5.48856rem;
+  height: 1.32844rem;
+  flex-shrink: 0;
+}

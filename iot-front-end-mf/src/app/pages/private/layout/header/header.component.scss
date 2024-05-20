@@ -1,0 +1,25 @@
+@import '../../../../../assets/styles/colors.scss';
+
+.header-title {
+  color: $Titles-Color;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+.header-bg {
+  background-color: #F9FAFB;
+}
+
+.header-font-size {
+  font-size: 22px;
+}
+
+.header-sizes {
+  width: 240px;
+  height: 100%;
+}
+
+mat-icon {
+  color: $Titles-Color !important;
+}

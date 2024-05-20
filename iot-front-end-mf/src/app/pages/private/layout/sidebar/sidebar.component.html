@@ -1,0 +1,87 @@
+<nav
+  class="sidebar sidebar-offcanvas side h-100 d-flex flex-column"
+  id="sidebar"
+>
+  <mat-accordion class="app-nav-accordion">
+    <div *ngFor="let item of listMenu">
+      <mat-nav-list *ngIf="!item.items">
+        <a
+          mat-list-item
+          [ngClass]="{ 'active': item.active }"
+          [routerLink]="item.path"
+        >
+          <p class="my-2">
+            <i [class]="item.icon" class="me-2 icon"></i>{{ item.name }}
+          </p>
+        </a>
+      </mat-nav-list>
+      <mat-expansion-panel
+        *ngIf="item.items"
+        class="mat-elevation-z0"
+        [expanded]="item.active"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <p class="mb-0" [ngClass]="{ subactive: item.active }">
+              <i [class]="item.icon" class="me-2"></i>{{ item.name }}
+            </p>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <div *ngFor="let subitem of item.items">
+            <a
+              mat-list-item
+              *ngIf="!subitem.items"
+              class="itemlink"
+              [ngClass]="{ active: subitem.active }"
+              [routerLink]="subitem.path"
+            >
+              <i [class]="subitem.icon" class="me-2"></i> {{ subitem.name }}
+            </a>
+            <mat-expansion-panel
+              *ngIf="subitem.items"
+              class="mat-elevation-z0"
+              [expanded]="subitem.active"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <p class="mb-0" [ngClass]="{ subactive: subitem.active }">
+                    <i [class]="subitem.icon" class="me-2"></i
+                    >{{ subitem.name }}
+                  </p>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-nav-list>
+                <a
+                  mat-list-item
+                  *ngFor="let subsubitem of subitem.items"
+                  class="itemlink"
+                  [ngClass]="{ active: subsubitem.active }"
+                  [routerLink]="subsubitem.path"
+                >
+                  <i
+                    class="fa-solid fa-arrow-right me-1"
+                    *ngIf="subsubitem.active"
+                  ></i>
+                  {{ subsubitem.name }}
+                </a>
+              </mat-nav-list>
+            </mat-expansion-panel>
+          </div>
+        </mat-nav-list>
+      </mat-expansion-panel>
+    </div>
+  </mat-accordion>
+  <div class="p-2 info mt-auto text-center">
+    {{ hour }}<br />
+    {{ date }}<br />
+    <p class="text-center">Versión 1.0.0 © 2024 Copyright <br /></p>
+    <div class="py-2">
+      <img
+        class="vanti-icon-small"
+        src="../../../../../assets/images/vanti-logo.svg"
+        alt="vanti-logo"
+      />
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,33 @@
+<div class="d-flex align-items-center h-100">
+  <div class="px-1 ps-3">
+    <button mat-icon-button (click)="showMenu()">
+      <mat-icon
+        color="primary"
+        matTooltip="{{ viewSidebar ? 'Close' : 'Open' }}"
+        >menu</mat-icon
+      >
+    </button>
+  </div>
+  <div class="header-title ps-3 mx-auto header-font-size">IOT Platform</div>
+  <div class="me-2 pb-2">
+    <button
+      class="header-button"
+      [matMenuTriggerFor]="menu"
+      mat-icon-button
+      matTooltip="Configuraciones"
+    >
+      <mat-icon svgIcon="gear-solid" color="primary"></mat-icon>
+    </button>
+  </div>
+</div>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon svgIcon="user-solid" color="primary"></mat-icon>
+    <span>Mi perfil</span>
+  </button>
+  <button mat-menu-item (click)="logout()">
+    <mat-icon svgIcon="circle-xmark-solid" color="primary"></mat-icon>
+    <span>Cerrar sesión</span>
+  </button>
+</mat-menu>
