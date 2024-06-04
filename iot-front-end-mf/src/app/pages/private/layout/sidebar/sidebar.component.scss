@@ -86,7 +86,7 @@ mat-icon {
 }
 
 .active, .router-link-active {
-  background: $Primary-P500 !important;
+  background: #113455;
   p,
   .fa-solid,
   .fa-regular {
@@ -99,7 +99,7 @@ mat-icon {
   &:active,
   &:focus {
     font-weight: bold !important;
-    background: $Primary-P500 !important;
+    background: #3d566d;
     color: white !important;
   }
 }

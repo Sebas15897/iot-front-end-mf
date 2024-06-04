@@ -17,37 +17,17 @@ export const MenuConfig: MenuData[] = [
     icon: 'fa-solid fa-house-user',
   },
   {
-    name: 'Dashboard',
+    name: 'Dashboard Gas',
     code: '',
     path: '/private/dashboard',
     icon: 'fa-solid fa-chart-column',
   },
-/*   {
-    name: 'Admin',
+  {
+    name: 'Dashboard Energia T',
     code: '',
-    path: '/admin/config',
-    icon: 'fa-solid fa-screwdriver-wrench',
-    items: [
-      {
-        name: 'Security',
-        icon: 'fa-solid fa-user-shield',
-      },
-      {
-        name: 'Settings',
-        icon: 'fa-solid fa-sliders',
-      },
-      {
-        name: 'Companies',
-        path: '/admin/config/companies',
-        icon: 'fa-regular fa-building',
-      },
-      {
-        name: 'Company',
-        path: '/admin/config/company',
-        icon: 'fa-regular fa-building',
-      },
-    ],
-  }, */
+    path: '/private/dashboard-termica',
+    icon: 'fa-solid fa-chart-column',
+  },
   {
     name: 'Jobs',
     path: '/admin/jobs',

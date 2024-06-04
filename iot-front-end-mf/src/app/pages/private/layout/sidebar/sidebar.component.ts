@@ -85,7 +85,6 @@ export class SidebarComponent implements OnInit, OnDestroy {
   async loadActive() {
     const listMenu: MenuData[] = this.copyJson(this.listMenu);
     const verify_item_menu = async (element) => {
-      console.log(element);
       if (element?.items) {
         let actives = 0;
         for (let i = 0; i < element.items.length; i++) {
@@ -100,7 +99,6 @@ export class SidebarComponent implements OnInit, OnDestroy {
           element.active = true;
         }
       } else {
-        console.log('entre 22');
         element.active = false;
         if (element?.path === this.actualOption) {
           element.active = true;

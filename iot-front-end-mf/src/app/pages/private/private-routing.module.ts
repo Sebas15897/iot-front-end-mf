@@ -23,6 +23,14 @@ const routes: Routes = [
             (module) => module.DashboardModule
           ),
       },
+      {
+        path: 'dashboard-termica',
+        title: 'Dashboard-termica',
+        loadChildren: () =>
+          import('./dasboard-termica/dasboard-termica.module').then(
+            (module) => module.DashboardTermicaModule
+          ),
+      },
     ],
     canActivate: [AuthPrivateGuard],
   },
@@ -32,5 +40,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-
 export class PrivateRoutingModule {}
