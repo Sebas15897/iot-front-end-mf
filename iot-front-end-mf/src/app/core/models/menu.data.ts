@@ -22,7 +22,7 @@ export const MenuConfig: MenuData[] = [
     path: '/private/dashboard',
     icon: 'fa-solid fa-chart-column',
   },
-  {
+/*   {
     name: 'Admin',
     code: '',
     path: '/admin/config',
@@ -47,7 +47,7 @@ export const MenuConfig: MenuData[] = [
         icon: 'fa-regular fa-building',
       },
     ],
-  },
+  }, */
   {
     name: 'Jobs',
     path: '/admin/jobs',
